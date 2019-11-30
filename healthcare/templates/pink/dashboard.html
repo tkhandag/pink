@@ -1,0 +1,10 @@
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<P>Hi <b>{{user.username}}</b> you are  logged in sucessfully.</p>
+<form method="POST"action="/user_logout/">
+  {% csrf_token %}
+   <button type="submit"  class="btn btn-primary" >Logout</button><br>
+ 
+  </form>
+{% endblock %}

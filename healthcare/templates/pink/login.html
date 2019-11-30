@@ -1,0 +1,54 @@
+{% extends "pink/particle_base.html " %}
+{% block content %}
+{% load staticfiles %}
+
+<link rel="stylesheet" media="screen" href="{% static 'pink/css/login_particle.css' %}">
+</head>
+<body>
+
+<!-- count particles -->
+
+
+
+ 
+         <div class="cont">
+      
+                
+        
+            
+                
+                        <div class="heading1">
+                            <h2>LOGIN</h2>
+                        </div>
+                        <div class="panel-body">
+                            <form method="POST">
+                            {% csrf_token %}
+                                <div class="form-group">
+                               <table >
+                                <tr>
+                               
+
+                               <td><input type="text"style='font-size:20px; padding:3px;margin:5px;' name="username"placeholder="Username"id='username' required></td>
+                               </tr> 
+                              
+                                <tr>
+                                <td><input type="password"style='font-size:20px;padding:3px;margin:5px;'placeholder="Password" name="password"required></td>
+                                </tr>
+                                <tr>
+                                <tr>
+                                
+                                <td><br></td>
+                                </tr>
+                                <p>{{error}}</p>
+                                </table>
+                                <button type="submit"  class="btn btn-primary" >Login</button><br>
+                            </form><br/>
+                        </div>
+                        <div id="log"><p style='color:white'>Don't have an account? <a href="/register/">Register</a></p></div>
+                    </div>
+                
+            
+          
+
+
+{% endblock %}

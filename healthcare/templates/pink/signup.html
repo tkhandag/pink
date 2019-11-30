@@ -1,0 +1,29 @@
+
+{% extends "pink/particle_base.html " %}
+{% block content %}
+{% load staticfiles %}
+
+<link rel="stylesheet" media="screen" href="{% static 'pink/css/signup_particle.css' %}">
+<div class="cont">
+<div class="cont1">
+<form method="POST">
+{% csrf_token %}
+      {% for field in form %}
+      <p>
+        {{ field.label_tag }}<br>
+        {{ field }}
+        
+        {% for error in field.errors %}
+          <p style="color: red">{{ error }}</p>
+        {% endfor %}
+      </p>
+    {% endfor %}
+    <button type="submit"  class="btn btn-primary" >SignUp</button>
+</form></div>
+
+</div>
+
+
+
+
+{% endblock %}

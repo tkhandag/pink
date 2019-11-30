@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+        <!--jQuery library-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!--Latest compiled and minified JavaScript-->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
+  <meta name="author" content="Vincent Garreau" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ {% load staticfiles %}
+
+  <link rel="stylesheet" media="screen" href="{% static 'pink/css/particle.css' %}">
+<link rel="stylesheet" media="screen" href="{% static 'pink/css/login_particle.css' %}">
+</head>
+<body>
+
+<!-- count particles -->
+
+
+<!-- particles.js container -->
+<div id="particles-js"></div>
+
+<!-- scripts -->
+ 
+{%block content%}
+{% endblock %}
+<!-- scripts -->
+<script src="{% static 'pink/js/particles.js' %} "></script>
+<script src="{% static 'pink/js/app.js' %} "></script>
+
+
+
+</body>
+</html>
